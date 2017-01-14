@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.marcelogaia.mortgagecalc.view.MainWindowController">
+   <children>
+      <SplitPane dividerPositions="0.40763052208835343" layoutX="83.0" layoutY="58.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" text="Mortage Calculator" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Helvetica Neue Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="20.0" layoutY="68.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="181.0" prefWidth="578.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="145.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="150.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="loanAmountFld" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="interestRateFld" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="numYearsFld" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="numPmtsYearFld" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="startDateFld" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="10.0" top="2.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label text="Loan Amount:">
+                           <font>
+                              <Font name="Helvetica Neue" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Interest Rate (%):" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Helvetica Neue" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="No. of Years:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Helvetica Neue" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="No. of  Pmts / Year:" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Helvetica Neue" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Start Date (optional):" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Helvetica Neue" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="23.0" text="Scheduled Payment Amount:" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Helvetica Neue" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="66.0" text="Total No. Payments:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Helvetica Neue" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="108.0" text="Total Payment Amount:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Helvetica Neue" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="150.0" text="Total Interest Paid:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Helvetica Neue" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="192.0" text="Date of Last Payment:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Helvetica Neue" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="scheduledPmtAmount" disable="true" editable="false" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="totalNumPayments" disable="true" editable="false" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="totalPayment" disable="true" editable="false" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="totalInterest" disable="true" editable="false" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="dateLastPayment" disable="true" editable="false" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="calcBtn" layoutX="512.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="paymentTable" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="pmtNum" minWidth="50.0" prefWidth="-1.0" text="Pmt No." />
+                      <TableColumn fx:id="date" minWidth="50.0" prefWidth="-1.0" text="Date" />
+                      <TableColumn fx:id="startBalance" minWidth="50.0" prefWidth="-1.0" text="Start Balance" />
+                      <TableColumn fx:id="pmtAmount" minWidth="50.0" prefWidth="83.0" text="Payment Amount" />
+                      <TableColumn fx:id="capitalPaid" minWidth="50.0" prefWidth="87.0" text="Capital Paid" />
+                      <TableColumn fx:id="interestPaid" minWidth="50.0" prefWidth="-1.0" text="Interest Paid" />
+                      <TableColumn fx:id="remainingBalance" minWidth="50.0" prefWidth="-1.0" text="Remaining Balance" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
